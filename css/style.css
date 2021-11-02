@@ -1,0 +1,74 @@
+/*---------- font-faces ----------*/
+@font-face {
+  font-family: "VisitDenmark-Bold";
+  src: url("fonts/VisitDenmark-Bold.otf");
+}
+
+@font-face {
+  font-family: "VisitDenmark-ExtraBold";
+  src: url("fonts/VisitDenmark-ExtraBold.otf");
+}
+
+@font-face {
+  font-family: "VisitDenmark-Medium";
+  src: url("fonts/VisitDenmark-Medium.otf");
+}
+
+@font-face {
+  font-family: "VisitDenmark-Outline-Medium";
+  src: url("fonts/VisitDenmark-Outline-Medium.otf");
+}
+
+@font-face {
+  font-family: "VisitDenmark-Outline-Regular";
+  src: url("fonts/VisitDenmark-Outline-Regular.otf");
+}
+
+@font-face {
+  font-family: "VisitDenmark-Regular";
+  src: url("fonts/VisitDenmark-Regular.otf");
+}
+
+@font-face {
+  font-family: "VisitDenmark-SemiBold";
+  src: url("fonts/VisitDenmark-SemiBold.otf");
+}
+
+/* ---------- global variables ----------*/
+/*----- Primary color palette -----*/
+/*----- Secondary color palette -----*/
+/* ---------- tabbar styling ---------- */
+.tabbar {
+  background-color: #022b52;
+  height: 55px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* Style the links inside the navigation bar */
+.tabbar a {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  margin: 0 5px;
+  font-family: "VisitDenmark-Regular";
+}
+/*# sourceMappingURL=style.css.map */

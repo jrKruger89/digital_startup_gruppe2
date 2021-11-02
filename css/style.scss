@@ -1,0 +1,78 @@
+/*---------- font-faces ----------*/
+@font-face {
+  font-family: "VisitDenmark-Bold";
+  src: url("fonts/VisitDenmark-Bold.otf");
+}
+@font-face {
+  font-family: "VisitDenmark-ExtraBold";
+  src: url("fonts/VisitDenmark-ExtraBold.otf");
+}
+@font-face {
+  font-family: "VisitDenmark-Medium";
+  src: url("fonts/VisitDenmark-Medium.otf");
+}
+@font-face {
+  font-family: "VisitDenmark-Outline-Medium";
+  src: url("fonts/VisitDenmark-Outline-Medium.otf");
+}
+@font-face {
+  font-family: "VisitDenmark-Outline-Regular";
+  src: url("fonts/VisitDenmark-Outline-Regular.otf");
+}
+@font-face {
+  font-family: "VisitDenmark-Regular";
+  src: url("fonts/VisitDenmark-Regular.otf");
+}
+@font-face {
+  font-family: "VisitDenmark-SemiBold";
+  src: url("fonts/VisitDenmark-SemiBold.otf");
+}
+
+/* ---------- global variables ----------*/
+
+/*----- Primary color palette -----*/
+$corporate-red: rgb(231, 0, 19);
+$corporate-blue: rgb(2, 43, 82);
+$black: rgb(0, 0, 0);
+$visitdenmark-grey-01: rgb(162, 169, 173);
+$visitdenmark-grey-02: rgb(207, 210, 211);
+$white: rgb(255, 255, 255);
+
+/*----- Secondary color palette -----*/
+$dark-blue: rgb(0, 88, 122);
+$dark-green: rgb(0, 117, 84);
+$dark-yellow: rgb(219, 162, 0);
+$light-blue: rgb(195, 235, 255);
+$light-green: rgb(163, 234, 191);
+$light-yellow: rgb(255, 232, 130);
+$burgundy: rgb(154, 0, 53);
+$pink: rgb(250, 197, 204);
+
+/* ---------- tabbar styling ---------- */
+.tabbar {
+  background-color: $corporate-blue;
+  height: 55px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the links inside the navigation bar */
+.tabbar a {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  margin: 0 5px;
+  font-family: "VisitDenmark-Regular";
+}
