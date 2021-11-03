@@ -36,6 +36,7 @@ function attachNavLinkEvents() {
     link.addEventListener("click", function (event) {
       const path = link.getAttribute("href");
       navigateTo(path);
+      location.reload();
       event.preventDefault();
     });
   }

@@ -37,6 +37,22 @@
 /* ---------- global variables ----------*/
 /*----- Primary color palette -----*/
 /*----- Secondary color palette -----*/
+/*----- General styling -----*/
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "VisitDenmark-Regular";
+}
+
+a {
+  text-decoration: none;
+}
+
 /* ---------- tabbar styling ---------- */
 .tabbar {
   background-color: #022b52;
@@ -69,6 +85,119 @@
 
 .nav-link {
   margin: 0 5px;
+}
+
+/*----- Home/Landing page -----*/
+.logo-load {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 350px;
+  -webkit-transition: all linear 1s;
+  transition: all linear 1s;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.city-link {
+  margin: 0;
+  position: absolute;
+  left: -400px;
+  width: 90vw;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #9a0035;
+}
+
+.city-section-title {
+  position: absolute;
+  left: -400px;
+}
+
+.city-card-section :nth-child(1) {
+  top: 80px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 2.5s;
+          transition-delay: 2.5s;
+}
+
+.city-card-section :nth-child(2) {
+  top: 110px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 2.5s;
+          transition-delay: 2.5s;
+}
+
+.city-card-section :nth-child(3) {
+  top: 280px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 3.5s;
+          transition-delay: 3.5s;
+}
+
+.city-card-section :nth-child(4) {
+  top: 450px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 4.5s;
+          transition-delay: 4.5s;
+}
+
+.city-card-section :nth-child(5) {
+  top: 620px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 5.5s;
+          transition-delay: 5.5s;
+}
+
+/*-- Logo --*/
+.heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.logo {
+  width: 70%;
+}
+
+/*-- Explore --*/
+.explore {
   font-family: "VisitDenmark-Regular";
+}
+
+.explore > p {
+  padding: 1.5rem;
+}
+
+.explore-map-btn {
+  display: inline-block;
+}
+
+.explore-img {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

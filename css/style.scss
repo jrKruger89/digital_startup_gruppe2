@@ -48,6 +48,21 @@ $light-yellow: rgb(255, 232, 130);
 $burgundy: rgb(154, 0, 53);
 $pink: rgb(250, 197, 204);
 
+/*----- General styling -----*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "VisitDenmark-Regular";
+}
+
+a {
+  text-decoration: none;
+}
+
 /* ---------- tabbar styling ---------- */
 .tabbar {
   background-color: $corporate-blue;
@@ -74,5 +89,86 @@ $pink: rgb(250, 197, 204);
 
 .nav-link {
   margin: 0 5px;
+}
+
+/*----- Home/Landing page -----*/
+.logo-load {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  width: 350px;
+  transition: all linear 1s;
+  transition-delay: 1s;
+}
+
+.city-link {
+  margin: 0;
+  position: absolute;
+  left: -400px;
+  width: 90vw;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid $burgundy;
+}
+.city-section-title {
+  position: absolute;
+  left: -400px;
+}
+
+.city-card-section :nth-child(1) {
+  top: 80px;
+  transition: all 1s;
+  transition-delay: 2.5s;
+}
+.city-card-section :nth-child(2) {
+  top: 110px;
+  transition: all 1s;
+  transition-delay: 2.5s;
+}
+.city-card-section :nth-child(3) {
+  top: 280px;
+  transition: all 1s;
+  transition-delay: 3.5s;
+}
+.city-card-section :nth-child(4) {
+  top: 450px;
+  transition: all 1s;
+  transition-delay: 4.5s;
+}
+.city-card-section :nth-child(5) {
+  top: 620px;
+  transition: all 1s;
+  transition-delay: 5.5s;
+}
+
+/*-- Logo --*/
+
+.heading {
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  width: 70%;
+}
+/*-- Explore --*/
+
+.explore {
   font-family: "VisitDenmark-Regular";
+}
+
+.explore > p {
+  padding: 1.5rem;
+}
+
+.explore-map-btn {
+  display: inline-block;
+}
+
+.explore-img {
+  width: 100%;
 }
