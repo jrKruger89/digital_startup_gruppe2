@@ -14,14 +14,35 @@ let _data_da = [];
 /**
  * Fetch categories from .json file, english version
  */
-let fetchCategories = async () => {
+let fetchCategories_en = async () => {
   const response = await fetch(category_path_en, { method: "GET" });
   const data = await response.json();
   _categories_en = data;
   console.log(_categories_en);
 };
+let fetchCategories_da = async () => {
+  const response = await fetch(category_path_da, { method: "GET" });
+  const data = await response.json();
+  _categories_da = data;
+  console.log(_categories_da);
+};
+let fetchData_en = async () => {
+  const response = await fetch(data_path_en, { method: "GET" });
+  const data = await response.json();
+  _data_en = data;
+  console.log(_data_en);
+};
+let fetchData_da = async () => {
+  const response = await fetch(data_path_da, { method: "GET" });
+  const data = await response.json();
+  _data_da = data;
+  console.log(_data_da);
+};
 
-fetchCategories();
+fetchCategories_en();
+fetchData_en();
+fetchCategories_da();
+fetchData_da();
 
 /**
  * Hide tabbar on landing page
