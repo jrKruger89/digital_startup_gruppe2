@@ -146,6 +146,7 @@ a {
 }
 
 .city-section-title {
+  color: black;
   font-family: "VisitDenmark-Bold";
   position: absolute;
   left: -400px;
