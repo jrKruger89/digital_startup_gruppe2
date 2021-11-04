@@ -31,6 +31,8 @@ let fetchData_en = async () => {
   const data = await response.json();
   _data_en = data;
   console.log(_data_en);
+  displayAttractions(_data_en);
+  appendAttractions(_data_en);
 };
 let fetchData_da = async () => {
   const response = await fetch(data_path_da, { method: "GET" });
@@ -44,14 +46,36 @@ fetchData_en();
 fetchCategories_da();
 fetchData_da();
 
+let displayAttractions = (data) => {
+  let result = data.filter((item) => item.MainCategory.Name === "Attractions");
+  result.forEach((item) => {
+    console.log(item);
+  });
+};
+
+let appendAttractions = (data) => {
+  let htmlTemplate = "";
+  let result = data.filter((item) => item.MainCategory.Name === "Attractions");
+  result.forEach((item) => {
+    htmlTemplate += /*html*/ `
+    <article class="attraction" style="background-image: url(${item.Files[0].Uri});">
+      <h2 class="attraction-title">${item.Name}</h2>
+    </article>
+  `;
+  });
+  document.querySelector(".attractions").innerHTML = htmlTemplate;
+};
+
 /**
  * Hide tabbar on landing page
  */
 let hideTabbar = () => {
   let home_section = document.querySelector("#home");
   let tabbar = document.querySelector(".tabbar");
+  let header = document.querySelector("header");
   if (home_section.style.display === "block") {
     tabbar.style.display = "none";
+    header.style.display = "none";
   }
 };
 
