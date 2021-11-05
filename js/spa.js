@@ -7,6 +7,7 @@
 const routes = {
   "#/": "home",
   "#/explore": "explore",
+  "#/detailView": "detailView",
   "#/search": "search",
   "#/plan": "plan",
   "#/faq": "faq",
