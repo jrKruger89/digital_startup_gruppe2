@@ -1,6 +1,9 @@
 "use strict";
 import "./spa.js";
 import "./fetchData.js";
+import { showDetailedView } from "./fetchData.js";
+
+window.showDetailedView = () => showDetailedView();
 
 /**
  * Hide tabbar on landing page

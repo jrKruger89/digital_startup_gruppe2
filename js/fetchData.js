@@ -1,5 +1,4 @@
 "use strict";
-
 const category_path_en = "../json/en/categories.json";
 const category_path_da = "../json/da/categories.json";
 const data_path_en = "../json/en/data.json";
@@ -10,7 +9,7 @@ let _categories_da = [];
 let _data_en = [];
 let _data_da = [];
 
-let _selectedAttraction;
+let _selectedItem;
 
 /**
  * Fetch categories from .json file, english version
@@ -49,14 +48,14 @@ fetchCategories_en();
 fetchData_en();
 //fetchCategories_da();
 //fetchData_da();
-
+/* 
 let logInfo = (data) => {
-  let activities = data.filter((item) => item.Category.Id === 65);
+  let activities = data.filter((item) => item.Id == 920537);
   activities.forEach((item) => {
     console.log(item);
   });
 };
-
+ */
 let appendMuseums = (data) => {
   let htmlTemplate = "";
   let museums = data.filter((item) => item.Category.Name === "Museums");
@@ -99,15 +98,8 @@ let appendPlacesToEat = (data) => {
   document.querySelector(".eat").innerHTML = htmlTemplate;
 };
 
-let showDetailedView = (id) => {
-  _selectedAttraction = _data_en.find((attraction) => attraction.id == id);
+export let showDetailedView = (id) => {
+  _selectedItem = _data_en.find((item) => item.id == id);
 
-  document.querySelector("#detailView").innerHTML =
-    /*html*/
-    `
-        <article>
-          <h2>${_selectedAttraction.Name}</h2>
-        </article>
-        `;
-  navigateTo("detailView");
+  console.log(_selectedItem);
 };
