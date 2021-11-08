@@ -1,31 +1,31 @@
 /*---------- font-faces ----------*/
 @font-face {
-  font-family: "VisitDenmark-Bold";
-  src: url("fonts/VisitDenmark-Bold.otf");
+    font-family: "VisitDenmark-Bold";
+    src: url("fonts/VisitDenmark-Bold.otf");
 }
 @font-face {
-  font-family: "VisitDenmark-ExtraBold";
-  src: url("fonts/VisitDenmark-ExtraBold.otf");
+    font-family: "VisitDenmark-ExtraBold";
+    src: url("fonts/VisitDenmark-ExtraBold.otf");
 }
 @font-face {
-  font-family: "VisitDenmark-Medium";
-  src: url("fonts/VisitDenmark-Medium.otf");
+    font-family: "VisitDenmark-Medium";
+    src: url("fonts/VisitDenmark-Medium.otf");
 }
 @font-face {
-  font-family: "VisitDenmark-Outline-Medium";
-  src: url("fonts/VisitDenmark-Outline-Medium.otf");
+    font-family: "VisitDenmark-Outline-Medium";
+    src: url("fonts/VisitDenmark-Outline-Medium.otf");
 }
 @font-face {
-  font-family: "VisitDenmark-Outline-Regular";
-  src: url("fonts/VisitDenmark-Outline-Regular.otf");
+    font-family: "VisitDenmark-Outline-Regular";
+    src: url("fonts/VisitDenmark-Outline-Regular.otf");
 }
 @font-face {
-  font-family: "VisitDenmark-Regular";
-  src: url("fonts/VisitDenmark-Regular.otf");
+    font-family: "VisitDenmark-Regular";
+    src: url("fonts/VisitDenmark-Regular.otf");
 }
 @font-face {
-  font-family: "VisitDenmark-SemiBold";
-  src: url("fonts/VisitDenmark-SemiBold.otf");
+    font-family: "VisitDenmark-SemiBold";
+    src: url("fonts/VisitDenmark-SemiBold.otf");
 }
 
 /* ---------- global variables ----------*/
@@ -50,262 +50,310 @@ $pink: rgb(250, 197, 204);
 
 /*----- General styling -----*/
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "VisitDenmark-Regular";
-  color: $white;
+    font-family: "VisitDenmark-Regular";
+    color: $white;
 }
 
 main {
-  padding: 60px 0;
+    padding: 60px 0;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 /* ---------- tabbar styling ---------- */
 .tabbar {
-  background-color: $white;
-  height: 55px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background-color: $white;
+    height: 55px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Style the links inside the navigation bar */
 .tabbar a {
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  font-size: 0.8em;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
 .nav-link {
-  margin: 0 5px;
+    margin: 0 5px;
 }
 
 .active {
-  margin: 0;
+    margin: 0;
 }
 
 /*----- Home/Landing page -----*/
 .logo-load {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%);
-  transform: translateX(-50%);
-  width: 350px;
-  transition: all linear 1s;
-  transition-delay: 1s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    width: 350px;
+    transition: all linear 1s;
+    transition-delay: 1s;
 }
 
 .city-link {
-  margin: 0;
-  position: absolute;
-  left: -400px;
-  width: 90vw;
-  height: 150px;
+    margin: 0;
+    position: absolute;
+    left: -400px;
+    width: 90vw;
+    height: 150px;
 }
 
 .city-card {
-  width: 90vw;
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 90vw;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .frame {
-  border: 2px solid $white;
-  height: 130px;
-  width: 85vw;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+    border: 2px solid $white;
+    height: 130px;
+    width: 85vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .city-section-title {
-  color: $black;
-  font-family: "VisitDenmark-Bold";
-  position: absolute;
-  left: -400px;
-  font-size: 2em;
+    color: $black;
+    font-family: "VisitDenmark-Bold";
+    position: absolute;
+    left: -400px;
+    font-size: 2em;
 }
 
 .city-title {
-  color: $white;
-  margin: 0 0 5px 0;
-  font-size: 2.3em;
-  font-family: "VisitDenmark-Bold";
+    color: $white;
+    margin: 0 0 5px 0;
+    font-size: 2.3em;
+    font-family: "VisitDenmark-Bold";
 }
 
 .city-card-section :nth-child(1) {
-  top: 70px;
-  transition: all 1s;
-  transition-delay: 2.5s;
+    top: 70px;
+    transition: all 1s;
+    transition-delay: 2.5s;
 }
 .city-card-section :nth-child(2) {
-  background-image: url("https://images.unsplash.com/photo-1610357310685-105e8a575744?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1935&q=80");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  top: 110px;
-  transition: all 1s;
-  transition-delay: 2.5s;
+    background-image: url("https://images.unsplash.com/photo-1610357310685-105e8a575744?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1935&q=80");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 110px;
+    transition: all 1s;
+    transition-delay: 2.5s;
 }
 .city-card-section :nth-child(3) {
-  background-image: url("https://api.colourbox.com/publicmedia302/1600px/49035055/media.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  top: 280px;
-  transition: all 1s;
-  transition-delay: 3.5s;
+    background-image: url("https://api.colourbox.com/publicmedia302/1600px/49035055/media.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 280px;
+    transition: all 1s;
+    transition-delay: 3.5s;
 }
 .city-card-section :nth-child(4) {
-  background-image: url("https://images.unsplash.com/photo-1584699411820-47302a6c00c0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1632&q=80");
-  background-size: cover;
-  top: 450px;
-  transition: all 1s;
-  transition-delay: 4.5s;
+    background-image: url("https://images.unsplash.com/photo-1584699411820-47302a6c00c0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1632&q=80");
+    background-size: cover;
+    top: 450px;
+    transition: all 1s;
+    transition-delay: 4.5s;
 }
 .city-card-section :nth-child(5) {
-  background-image: url("https://api.colourbox.com/publicmedia302/1600px/44496224/media.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  top: 620px;
-  transition: all 1s;
-  transition-delay: 5.5s;
+    background-image: url("https://api.colourbox.com/publicmedia302/1600px/44496224/media.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 620px;
+    transition: all 1s;
+    transition-delay: 5.5s;
 }
 
 /*---------------------------------------------------------------*/
 
 /*-- Header --*/
 header {
-  background-color: $white;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 9999999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background-color: $white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .header-logo {
-  width: 200px;
+    width: 200px;
 }
 /*----- Explore -----*/
 .explore-hero {
-  background-image: url("https://api.colourbox.com/publicmedia302/1600px/44496224/media.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background-image: url("https://api.colourbox.com/publicmedia302/1600px/44496224/media.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .explore-hero > .frame {
-  height: 280px;
-  width: 95vw;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+    height: 280px;
+    width: 95vw;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 .explore-title {
-  margin: 0 0 0 8px;
-  font-family: "VisitDenmark-Bold";
-  font-size: 2.5em;
+    margin: 0 0 0 8px;
+    font-family: "VisitDenmark-Bold";
+    font-size: 2.5em;
 }
 
 .explore-city {
-  margin: 0 0 0 8px;
-  font-family: "VisitDenmark-Outline-Regular";
-  font-size: 4em;
+    margin: 0 0 0 8px;
+    font-family: "VisitDenmark-Outline-Regular";
+    font-size: 4em;
 }
 
 .explore > p {
-  padding: 1rem;
-  color: $corporate-blue;
-  font-size: 0.9rem;
+    padding: 1rem;
+    color: $corporate-blue;
+    font-size: 0.9rem;
 }
 
 .attractions-title {
-  color: $black;
-  font-family: "VisitDenmark-ExtraBold";
-  padding: 0 0 1rem 1rem;
+    color: $black;
+    font-family: "VisitDenmark-ExtraBold";
+    padding: 0 0 1rem 1rem;
 }
 .museums-title,
 .activities-title,
 .eat-title {
-  font-family: "VisitDenmark-Bold";
-  font-size: 1.5em;
-  color: $corporate-blue;
-  padding: 0 0 1rem 0;
+    font-family: "VisitDenmark-Bold";
+    font-size: 1.5em;
+    color: $corporate-blue;
+    padding: 0 0 1rem 0;
 }
 
 .attractions {
-  padding: 0 1rem 0 1rem;
+    padding: 0 1rem 0 1rem;
 }
 
 .museums,
 .activities,
 .eat {
-  display: flex;
-  overflow-y: hidden;
+    display: flex;
+    overflow-y: hidden;
 }
 .attraction {
-  display: flex;
-  margin: 0 0.5rem 0 0;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+    display: flex;
+    margin: 0 0.5rem 0 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .attraction-title {
-  font-family: "VisitDenmark-Bold";
-  text-transform: uppercase;
-  font-size: 1.2em;
-  margin: 0 1rem 0 0;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+    font-family: "VisitDenmark-Bold";
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin: 0 1rem 0 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 ::-webkit-scrollbar {
-  width: 0; /* Remove scrollbar space */
-  background: transparent; /* Optional: just make scrollbar invisible */
+    width: 0; /* Remove scrollbar space */
+    background: transparent; /* Optional: just make scrollbar invisible */
 }
 
 /*----- Search -----*/
 .search-page-title {
-  color: $black;
-  font-family: "VisitDenmark-Bold";
-  margin: 1rem 0 0 1rem;
+    color: $black;
+    font-family: "VisitDenmark-Bold";
+    margin: 1rem 0 0 1rem;
 }
 
 .search-bar {
-  margin: 1rem 0 0 1rem;
-  width: 90vw;
-  height: 40px;
+    margin: 1rem 0 0 1rem;
+    width: 90vw;
+    height: 40px;
 }
 
 /*----- Plan -----*/
 .plan-page-title {
-  color: $black;
-  font-family: "VisitDenmark-Bold";
-  margin: 1rem 0 0 1rem;
+    color: $black;
+    font-family: "VisitDenmark-Bold";
+    margin: 1rem 0 0 1rem;
+}
+
+/* ---------- loader styling ---------- */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999999;
+    overflow: hidden;
+    background: rgba($color: $visitdenmark-grey-02, $alpha: 0.5);
+    text-align: center;
+}
+
+.spinner {
+    border: 5px solid $corporate-red;
+    border-radius: 50%;
+    border-top: 5px solid $corporate-blue;
+    width: 50px;
+    height: 50px;
+    -webkit-animation: spin 1s linear infinite;
+    /* Safari */
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.4s, opacity 0.4s linear;
 }
