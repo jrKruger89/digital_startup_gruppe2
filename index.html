@@ -1,121 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css"
-            rel="stylesheet"
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>City Planner Guide</title>
+  </head>
+  <body>
+    <header>
+      <img
+        src="images/logo.png"
+        class="header-logo"
+        alt="visitdenmark logo blue"
+      />
+    </header>
+    <nav class="tabbar">
+      <a href="#/" class="nav-link">Home</a>
+      <a href="#/explore" class="nav-link">Explore</a>
+      <a href="#/search" class="nav-link">Search</a>
+      <a href="#/plan" class="nav-link">Plan</a>
+      <a href="#/faq" class="nav-link">FAQ</a>
+    </nav>
+    <main>
+      <section id="home" class="page">
+        <img
+          src="images/logo.png"
+          class="logo-load"
+          alt="visitdenmark logo blue"
         />
-        <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
-        <link rel="stylesheet" href="css/style.css" />
-        <title>City Planner Guide</title>
-    </head>
-    <body>
-        <header>
-            <img
-                src="images/logo.png"
-                class="header-logo"
-                alt="visitdenmark logo blue"
-            />
-        </header>
-        <nav class="tabbar">
-            <a href="#/" class="nav-link">Home</a>
-            <a href="#/explore" class="nav-link">Explore</a>
-            <a href="#/search" class="nav-link">Search</a>
-            <a href="#/plan" class="nav-link">Plan</a>
-            <a href="#/faq" class="nav-link">FAQ</a>
-        </nav>
-        <main>
-            <section id="home" class="page">
-                <img
-                    src="images/logo.png"
-                    class="logo-load"
-                    alt="visitdenmark logo blue"
-                />
-                <section class="city-card-section">
-                    <h3 class="city-section-title">Choose city</h3>
-                    <a href="" class="city-link nav-link"
-                        ><article class="city-card">
-                            <div class="frame">
-                                <h2 class="city-title">COPENHAGEN</h2>
-                            </div>
-                        </article>
-                    </a>
-                    <a href="" class="city-link nav-link">
-                        <article class="city-card">
-                            <div class="frame">
-                                <h2 class="city-title">ODENSE</h2>
-                            </div>
-                        </article>
-                    </a>
-                    <a href="" class="city-link nav-link">
-                        <article class="city-card">
-                            <div class="frame">
-                                <h2 class="city-title">AALBORG</h2>
-                            </div>
-                        </article>
-                    </a>
-                    <a href="#/explore" class="city-link nav-link">
-                        <article class="city-card">
-                            <div class="frame">
-                                <h2 class="city-title">AARHUS</h2>
-                            </div>
-                        </article>
-                    </a>
-                </section>
-            </section>
-            <section id="explore" class="page">
-                <article class="explore-hero">
-                    <div class="frame">
-                        <h3 class="explore-title">EXPLORE</h3>
-                        <h2 class="explore-city">AARHUS</h2>
-                    </div>
-                </article>
-                <article class="explore">
-                    <p>
-                        Find information and inspiration about Aarhus such as
-                        new experiences, attractions, museums, accommodation,
-                        events and activities as well as shopping, restaurants,
-                        and practical information for your holiday. <br />
-                        <br />Whether you travel alone, with friends or<br />family
-                        you can find all the information and suggestions you
-                        need right here!
-                    </p>
-                </article>
-                <h2 class="attractions-title">Attractions</h2>
-                <section class="attractions">
-                    <h3 class="museums-title">Museums</h3>
-                    <section class="museums"></section>
-                    <h3 class="activities-title">Activities</h3>
-                    <section class="activities"></section>
-                    <h3 class="eat-title">Places to eat</h3>
-                    <section class="eat"></section>
-                </section>
-            </section>
-            <section id="detailView" class="page"></section>
-            <section id="search" class="page">
-                <h2 class="search-page-title">Search</h2>
-                <input
-                    class="search-bar"
-                    type="search"
-                    placeholder="Example: 'Museums'"
-                    onkeyup="search(this.value)"
-                    onsearch="search(this.value)"
-                />
-            </section>
-            <section id="plan" class="page">
-                <h2 class="plan-page-title">Plan</h2>
-            </section>
-            <section id="faq" class="page">
-                <h2 class="faq-page-title">FAQ</h2>
-            </section>
-            <!-- loader  -->
-            <section id="loader">
-                <section class="spinner"></section>
-            </section>
-        </main>
-        <script src="js/main.js" type="module"></script>
-    </body>
+        <section class="city-card-section">
+          <h3 class="city-section-title">Choose city</h3>
+          <a href="" class="city-link nav-link"
+            ><article class="city-card">
+              <div class="frame">
+                <h2 class="city-title">COPENHAGEN</h2>
+              </div>
+            </article>
+          </a>
+          <a href="" class="city-link nav-link">
+            <article class="city-card">
+              <div class="frame">
+                <h2 class="city-title">ODENSE</h2>
+              </div>
+            </article>
+          </a>
+          <a href="" class="city-link nav-link">
+            <article class="city-card">
+              <div class="frame">
+                <h2 class="city-title">AALBORG</h2>
+              </div>
+            </article>
+          </a>
+          <a href="#/explore" class="city-link nav-link">
+            <article class="city-card">
+              <div class="frame">
+                <h2 class="city-title">AARHUS</h2>
+              </div>
+            </article>
+          </a>
+        </section>
+      </section>
+      <section id="explore" class="page">
+        <article class="explore-hero">
+          <div class="frame">
+            <h3 class="explore-title">EXPLORE</h3>
+            <h2 class="explore-city">AARHUS</h2>
+          </div>
+        </article>
+        <article class="explore">
+          <p>
+            Find information and inspiration about Aarhus such as new
+            experiences, attractions, museums, accommodation, events and
+            activities as well as shopping, restaurants, and practical
+            information for your holiday. <br />
+            <br />Whether you travel alone, with friends or<br />family you can
+            find all the information and suggestions you need right here!
+          </p>
+        </article>
+        <h2 class="attractions-title">Attractions</h2>
+        <section class="attractions">
+          <h3 class="museums-title">Museums</h3>
+          <section class="museums"></section>
+          <h3 class="activities-title">Activities</h3>
+          <section class="activities"></section>
+          <h3 class="eat-title">Places to eat</h3>
+          <section class="eat"></section>
+        </section>
+      </section>
+      <section id="detailView" class="page"></section>
+      <section id="search" class="page">
+        <h2 class="search-page-title">Search</h2>
+        <input
+          class="search-bar"
+          type="search"
+          placeholder="Example: 'Museums'"
+          onkeyup="search(this.value)"
+          onsearch="search(this.value)"
+        />
+      </section>
+      <section id="plan" class="page">
+        <h2 class="plan-page-title">Plan</h2>
+      </section>
+      <section id="faq" class="page">
+        <h2 class="faq-page-title">FAQ</h2>
+      </section>
+      <!-- loader  -->
+      <section id="loader">
+        <section class="spinner"></section>
+      </section>
+    </main>
+    <script src="js/main.js" type="module"></script>
+  </body>
 </html>

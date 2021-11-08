@@ -46,7 +46,7 @@ function attachNavLinkEvents() {
 /**
  * Navigating SPA to specific page by given pathnameß
  */
-function navigateTo(pathname) {
+export function navigateTo(pathname) {
   hideAllPages();
   const basePath = location.pathname.replace("index.html", "");
   window.history.pushState({}, pathname, basePath + pathname);
