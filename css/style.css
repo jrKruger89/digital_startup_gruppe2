@@ -354,9 +354,27 @@ header {
 }
 
 .search-bar {
-  margin: 1rem 0 0 1rem;
+  margin: 1rem 0 1rem 1rem;
   width: 90vw;
   height: 40px;
+}
+
+.search-results {
+  margin: 0 1rem 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.search-results article {
+  height: 150px;
+  width: 160px;
+  margin: 0 0 1rem 0;
 }
 
 /*----- Plan -----*/
