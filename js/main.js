@@ -1,9 +1,13 @@
 "use strict";
 import "./spa.js";
-import "./fetchData.js";
+
 import { showDetailedView } from "./fetchData.js";
+import { search } from "./fetchData.js";
+import "./fetchData.js";
+//import "./map.js";
 
 window.showDetailedView = () => showDetailedView();
+window.search = () => search();
 
 /**
  * Hide tabbar on landing page

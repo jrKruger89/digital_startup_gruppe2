@@ -1,31 +1,14 @@
 "use strict";
-const category_path_en = "../json/en/categories.json";
-const category_path_da = "../json/da/categories.json";
-const data_path_en = "../json/en/data.json";
-const data_path_da = "../json/da/data.json";
 
-let _categories_en = [];
-let _categories_da = [];
+const data_path_en = "../json/en/data.json";
 let _data_en = [];
-let _data_da = [];
 
 let _selectedItem;
 
 /**
  * Fetch categories from .json file, english version
  */
-export let fetchCategories_en = async () => {
-  const response = await fetch(category_path_en, { method: "GET" });
-  const data = await response.json();
-  _categories_en = data;
-  console.log(_categories_en);
-};
-let fetchCategories_da = async () => {
-  const response = await fetch(category_path_da, { method: "GET" });
-  const data = await response.json();
-  _categories_da = data;
-  console.log(_categories_da);
-};
+
 export let fetchData_en = async () => {
   const response = await fetch(data_path_en, { method: "GET" });
   const data = await response.json();
@@ -34,34 +17,15 @@ export let fetchData_en = async () => {
   appendMuseums(_data_en);
   appendActivities(_data_en);
   appendPlacesToEat(_data_en);
-
-  //logInfo(_data_en);
 };
-let fetchData_da = async () => {
-  const response = await fetch(data_path_da, { method: "GET" });
-  const data = await response.json();
-  _data_da = data;
-  console.log(_data_da);
-};
-
-fetchCategories_en();
 fetchData_en();
-//fetchCategories_da();
-//fetchData_da();
-/* 
-let logInfo = (data) => {
-  let activities = data.filter((item) => item.Id == 920537);
-  activities.forEach((item) => {
-    console.log(item);
-  });
-};
- */
+
 let appendMuseums = (data) => {
   let htmlTemplate = "";
   let museums = data.filter((item) => item.Category.Name === "Museums");
   museums.forEach((item) => {
     htmlTemplate += /*html*/ `
-    <article class="attraction" onclick="showDetailedView('${item.Id}')" style="background-image: url(${item.Files[0].Uri});">
+    <article class="attraction" onclick="showDetailedView(${item.Id})" style="background-image: url(${item.Files[0].Uri});">
       <h2 class="attraction-title">${item.Name}</h2>
     </article>
   `;
@@ -74,7 +38,7 @@ let appendActivities = (data) => {
   let activities = data.filter((item) => item.Category.Name === "Sightseeing");
   activities.forEach((item) => {
     htmlTemplate += /*html*/ `
-    <article class="attraction" onclick="showDetailedView('${item.Id}')" style="background-image: url(${item.Files[0].Uri});">
+    <article class="attraction" onclick="showDetailedView(${item.Id})" style="background-image: url(${item.Files[0].Uri});">
       <h2 class="attraction-title">${item.Name}</h2>
     </article>
   `;
@@ -88,7 +52,7 @@ let appendPlacesToEat = (data) => {
   restaurants.forEach((item) => {
     if (item.Files.length > 0) {
       htmlTemplate += /*html*/ `
-    <article class="attraction" onclick="showDetailedView('${item.Id}')" style="background-image: url(${item.Files[0].Uri});">
+    <article class="attraction" onclick="showDetailedView(${item.Id})" style="background-image: url(${item.Files[0].Uri});">
       <h2 class="attraction-title">${item.Name}</h2>
     </article>
   `;
@@ -99,7 +63,30 @@ let appendPlacesToEat = (data) => {
 };
 
 export let showDetailedView = (id) => {
+  let htmlTemplate = "";
   _selectedItem = _data_en.find((item) => item.id == id);
 
   console.log(_selectedItem);
+
+  htmlTemplate += /*html*/ `
+  <article class="attraction-details attraction-hero" style="background-image: url(${_selectedItem.Files[0].Uri});">
+  <div class="frame">
+    <h2 class="attraction-title">${_selectedItem.Name}</h2>
+    <h3 class="hashtag"></h3>
+  </div>
+  <h3 class="description-title">${_selectedItem}</h3>
+  <i class="favorite-icon"></i>
+  <p class="attraction-description"></p>
+  <button></button>
+  <button></button>
+  <h3></h3>
+  <i class="geo-pin"></i><p class="adress"></p>
+  <div id="map" class="map"></div>
+  </article>
+`;
+};
+
+export let search = (value) => {
+  value = value.toLowerCase();
+  console.log(value);
 };

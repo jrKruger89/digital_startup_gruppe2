@@ -208,7 +208,7 @@ header {
 .header-logo {
   width: 200px;
 }
-/*-- Explore --*/
+/*----- Explore -----*/
 .explore-hero {
   background-image: url("https://api.colourbox.com/publicmedia302/1600px/44496224/media.jpg");
   background-position: center;
@@ -288,4 +288,11 @@ header {
 ::-webkit-scrollbar {
   width: 0; /* Remove scrollbar space */
   background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+/*----- Search -----*/
+.search-page-title {
+  color: $black;
+  font-family: "VisitDenmark-Bold";
+  margin: 0 0 0 8px;
 }

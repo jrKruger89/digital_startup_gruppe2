@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
     <link rel="stylesheet" href="css/style.css" />
     <title>City Planner Guide</title>
   </head>
@@ -90,13 +95,19 @@
       </section>
       <section id="detailView" class="page"></section>
       <section id="search" class="page">
-        <h2 class="page-title">Search</h2>
+        <h2 class="search-page-title">Search</h2>
+        <input
+          class="search-bar"
+          type="search"
+          placeholder="Search"
+          onkeyup="search(this.value)"
+        />
       </section>
       <section id="plan" class="page">
-        <h2 class="page-title">Plan</h2>
+        <h2 class="plan-page-title">Plan</h2>
       </section>
       <section id="faq" class="page">
-        <h2 class="page-title">FAQ</h2>
+        <h2 class="faq-page-title">FAQ</h2>
       </section>
     </main>
     <script src="js/main.js" type="module"></script>
