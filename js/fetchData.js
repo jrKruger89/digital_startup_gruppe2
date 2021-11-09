@@ -124,9 +124,9 @@ export let addToFav = (id) => {
     let span = document.querySelector(".addFav > svg > path");
     /**
      * Change color of heart icon when saved
-     * Add item to global array
+     * Add item to global array / jsonbin
      */
-    _selectedItem = _data_en.find((item) => item.Id == id);
+
     console.log(_selectedItem);
     _favorites.push(_selectedItem);
     console.log(_favorites);
