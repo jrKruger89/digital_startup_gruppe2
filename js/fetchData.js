@@ -67,6 +67,14 @@ export let showDetailedView = (id) => {
   _selectedItem = _data_en.find((item) => item.Id == id);
   console.log(_selectedItem);
 
+  document.querySelector("header").innerHTML += /*html*/ `
+  <span class="left nav-link">&lt;</span>
+  `;
+  document.querySelector(".left").addEventListener("click", () => {
+    navigateTo("#/explore");
+    location.reload();
+  });
+
   document.querySelector("#detailView").innerHTML = /*html*/ `
   <article class="attraction-details attraction-hero" style="background-image: url(${_selectedItem.Files[0].Uri});">
   <div class="frame">
@@ -88,7 +96,6 @@ export let showDetailedView = (id) => {
 
 /**
  * Make append function for search results
- * @param {*} value
  */
 let appendSearchResults = (data) => {
   let htmlTemplate = "";
@@ -123,7 +130,6 @@ export let search = (value) => {
       appendSearchResults(filteredResults);
     }
   }
-  console.log(filteredResults);
 };
 
 function showLoader(show = true) {

@@ -78,7 +78,7 @@ a {
   right: 0;
   z-index: 9999;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -290,6 +290,15 @@ header {
   background: transparent; /* Optional: just make scrollbar invisible */
 }
 
+/*----- Detail View -----*/
+.left {
+  position: absolute;
+  left: 1rem;
+  top: 8px;
+  font-size: 2.5rem;
+  color: $corporate-blue;
+}
+
 /*----- Search -----*/
 .search-page-title {
   color: $black;
@@ -298,12 +307,16 @@ header {
 }
 
 .search-bar {
-  margin: 1rem 0 1rem 1rem;
+  font-family: "VisitDenmark-Regular";
+  margin: 1rem;
+  padding: 2px;
   width: 90vw;
   height: 40px;
+  font-size: 1.2rem;
 }
 
 .search-results {
+  width: 90vw;
   margin: 0 1rem 0 1rem;
   display: flex;
   justify-content: space-evenly;
@@ -311,8 +324,8 @@ header {
 }
 
 .search-results article {
-  height: 150px;
-  width: 160px;
+  height: 160px;
+  width: 150px;
   margin: 0 0 1rem 0;
 }
 
