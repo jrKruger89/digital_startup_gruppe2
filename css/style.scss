@@ -36,6 +36,7 @@ $corporate-blue: rgb(2, 43, 82);
 $black: rgb(0, 0, 0);
 $visitdenmark-grey-01: rgb(162, 169, 173);
 $visitdenmark-grey-02: rgb(207, 210, 211);
+$visitdenmark-grey-03: rgb(88, 88, 88);
 $white: rgb(255, 255, 255);
 
 /*----- Secondary color palette -----*/
@@ -68,6 +69,13 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: none;
+  font-size: 0.8rem;
+  font-family: "VisitDenmark-Regular";
+  color: $white;
+}
+
 /* ---------- tabbar styling ---------- */
 .tabbar {
   background-color: $white;
@@ -96,7 +104,8 @@ a {
   margin: 0 5px;
 }
 
-.active {
+.active > svg > path {
+  fill: $corporate-red;
   margin: 0;
 }
 
@@ -291,6 +300,64 @@ header {
 }
 
 /*----- Detail View -----*/
+.attraction-hero {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.attraction-hero > .frame {
+  height: 280px;
+  width: 95vw;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.description-title {
+  color: $black;
+  font-size: 1.2rem;
+  font-family: "VisitDenmark-Bold";
+}
+
+.attraction-description {
+  margin: 0 1rem;
+  color: $black;
+  height: 190px;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.open {
+  overflow: visible;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.detail-button {
+  height: 40px;
+  padding: 5px;
+  width: 170px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.see-more-btn {
+  background-color: $corporate-red;
+}
+.others-say-btn {
+  background-color: $corporate-blue;
+}
+
 .left {
   position: absolute;
   left: 1rem;
@@ -330,10 +397,42 @@ header {
 }
 
 /*----- Plan -----*/
+h4 {
+  font-family: "VisitDenmark-Bold";
+  text-transform: uppercase;
+  color: $visitdenmark-grey-03;
+  font-size: 1.2rem;
+  margin: 0 5px;
+}
 .plan-page-title {
-  color: $black;
+  color: $visitdenmark-grey-03;
   font-family: "VisitDenmark-Bold";
   margin: 1rem 0 0 1rem;
+  font-size: 2rem;
+}
+.secondary_icon {
+  width: 25px;
+  margin: 0 5px;
+}
+.icon_flex {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 1rem 0 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex_left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.flex_right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.lists {
+  height: 50vh;
 }
 
 /* ---------- loader styling ---------- */

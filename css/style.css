@@ -58,6 +58,13 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: none;
+  font-size: 0.8rem;
+  font-family: "VisitDenmark-Regular";
+  color: white;
+}
+
 /* ---------- tabbar styling ---------- */
 .tabbar {
   background-color: white;
@@ -91,7 +98,8 @@ a {
   margin: 0 5px;
 }
 
-.active {
+.active > svg > path {
+  fill: #e70013;
   margin: 0;
 }
 
@@ -346,6 +354,83 @@ header {
 }
 
 /*----- Detail View -----*/
+.attraction-hero {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.attraction-hero > .frame {
+  height: 280px;
+  width: 95vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.description-title {
+  color: black;
+  font-size: 1.2rem;
+  font-family: "VisitDenmark-Bold";
+}
+
+.attraction-description {
+  margin: 0 1rem;
+  color: black;
+  height: 190px;
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.open {
+  overflow: visible;
+  height: 100%;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1rem;
+}
+
+.detail-button {
+  height: 40px;
+  padding: 5px;
+  width: 170px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.see-more-btn {
+  background-color: #e70013;
+}
+
+.others-say-btn {
+  background-color: #022b52;
+}
+
 .left {
   position: absolute;
   left: 1rem;
@@ -390,10 +475,71 @@ header {
 }
 
 /*----- Plan -----*/
+h4 {
+  font-family: "VisitDenmark-Bold";
+  text-transform: uppercase;
+  color: #585858;
+  font-size: 1.2rem;
+  margin: 0 5px;
+}
+
 .plan-page-title {
-  color: black;
+  color: #585858;
   font-family: "VisitDenmark-Bold";
   margin: 1rem 0 0 1rem;
+  font-size: 2rem;
+}
+
+.secondary_icon {
+  width: 25px;
+  margin: 0 5px;
+}
+
+.icon_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 1rem 1rem 0 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.lists {
+  height: 50vh;
 }
 
 /* ---------- loader styling ---------- */
