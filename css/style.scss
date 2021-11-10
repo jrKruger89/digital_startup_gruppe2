@@ -62,7 +62,7 @@ body {
 }
 
 main {
-  padding: 60px 0;
+  min-height: calc(100vh - 60px);
 }
 
 a {
@@ -76,10 +76,15 @@ button {
   color: $white;
 }
 
+.page {
+  margin: 60px 0 50px 0;
+}
+
 /* ---------- tabbar styling ---------- */
 .tabbar {
   background-color: $white;
   height: 55px;
+  width: 100vw;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -110,6 +115,12 @@ button {
 }
 
 /*----- Home/Landing page -----*/
+#home {
+  height: 100vh;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+}
 .logo-load {
   position: absolute;
   top: 50%;
@@ -162,7 +173,7 @@ button {
 }
 
 .city-card-section :nth-child(1) {
-  top: 70px;
+  top: 60px;
   transition: all 1s;
   transition-delay: 2.5s;
 }
@@ -171,7 +182,7 @@ button {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  top: 110px;
+  top: 100px;
   transition: all 1s;
   transition-delay: 2.5s;
 }
@@ -180,14 +191,14 @@ button {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  top: 280px;
+  top: 270px;
   transition: all 1s;
   transition-delay: 3.5s;
 }
 .city-card-section :nth-child(4) {
   background-image: url("https://images.unsplash.com/photo-1584699411820-47302a6c00c0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1632&q=80");
   background-size: cover;
-  top: 450px;
+  top: 440px;
   transition: all 1s;
   transition-delay: 4.5s;
 }
@@ -196,7 +207,7 @@ button {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  top: 620px;
+  top: 610px;
   transition: all 1s;
   transition-delay: 5.5s;
 }
@@ -255,7 +266,9 @@ header {
 
 .attractions-title {
   color: $black;
-  font-family: "VisitDenmark-ExtraBold";
+  font-family: "VisitDenmark-Bold";
+  color: $visitdenmark-grey-03;
+  font-size: 2rem;
   padding: 0 0 1rem 1rem;
 }
 .museums-title,
@@ -319,9 +332,9 @@ header {
 }
 
 .description-title {
-  color: $black;
-  font-size: 1.2rem;
-  font-family: "VisitDenmark-Bold";
+  color: $visitdenmark-grey-03;
+  font-size: 1.4rem;
+  font-family: "VisitDenmark-ExtraBold";
 }
 
 .attraction-description {
@@ -344,6 +357,7 @@ header {
 }
 
 .detail-button {
+  margin: 0 0 1rem 0;
   height: 40px;
   padding: 5px;
   width: 170px;
@@ -357,18 +371,41 @@ header {
 .others-say-btn {
   background-color: $corporate-blue;
 }
-
+.direction-title {
+  color: $visitdenmark-grey-03;
+  font-family: "VisitDenmark-Bold";
+  font-size: 1.4rem;
+  margin: 1rem 0 0 1rem;
+}
+.geotag {
+  color: $corporate-red;
+  padding: 0 5px 0 0;
+}
+.address {
+  color: $black;
+}
+.address-wrapper {
+  margin: 0 1rem 1rem 1rem;
+  display: flex;
+}
+#map {
+  height: 280px;
+  margin: 0 1rem 1rem 1rem;
+}
+.mapboxgl-marker > svg > g :nth-child(2) {
+  fill: $corporate-red;
+}
 .left {
   position: absolute;
   left: 1rem;
-  top: 8px;
+  top: 2px;
   font-size: 2.5rem;
   color: $corporate-blue;
 }
 
 /*----- Search -----*/
 .search-page-title {
-  color: $black;
+  color: $visitdenmark-grey-03;
   font-family: "VisitDenmark-Bold";
   margin: 1rem 0 0 1rem;
 }
@@ -433,6 +470,87 @@ h4 {
 }
 .lists {
   height: 50vh;
+}
+
+.my-favorites {
+  width: 90vw;
+  margin: 1rem 1rem 0 1rem;
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+}
+.favorite {
+  height: 160px;
+  width: 160px;
+  margin: 0 0 0.5rem 0;
+}
+/* ----- Modal ----*/
+
+#myBtn {
+  background: none;
+}
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #022b52;
+  margin: auto;
+  padding: 20px;
+  border: none;
+  width: 80%;
+  height: 180px;
+}
+
+#modal-title {
+  text-align: center;
+  margin: 15px 0 0 0;
+}
+
+#list {
+  height: 40px;
+  padding: 5px;
+  width: 100%;
+}
+
+#title-list {
+  font-size: 12px;
+}
+
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#createBtn {
+  background-color: $corporate-red;
+  height: 40px;
+  padding: 5px;
+  width: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  float: right;
+  margin: 10px 0 0 0;
 }
 
 /* ---------- loader styling ---------- */
