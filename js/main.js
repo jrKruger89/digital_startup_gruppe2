@@ -2,13 +2,22 @@
 import "./spa.js";
 import "./fetchData.js";
 
-import { expandText, search, showDetailedView, addToFav } from "./fetchData.js";
+import {
+  expandText,
+  search,
+  showDetailedView,
+  addToFav,
+  loadFavorites,
+} from "./fetchData.js";
 window.showDetailedView = (id) => showDetailedView(id);
 window.search = (value) => search(value);
 window.expandText = () => expandText();
 window.addToFav = () => addToFav();
 window.showTab = () => showTab();
 window.hideTab = () => hideTab();
+
+loadFavorites();
+
 /**
  * Hide tabbar on landing page
  */

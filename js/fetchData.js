@@ -2,7 +2,6 @@
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoiamVzcGVyLXItayIsImEiOiJja3ZxZ295ZXQ4ZmF0Mm5xd2xpZjg2d2Z6In0.T9hZCCVB0ZFLIeN0o12OYA";
-
 import { navigateTo } from "./spa.js";
 const data_path_en = "../json/en/data.json";
 let _data_en = [];
@@ -134,29 +133,15 @@ export let expandText = () => {
   }
 };
 
-export let addToFav = () => {
+export let addToFav = async () => {
   let span = document.querySelector(".addFav > svg > path");
   span.style.fill = "red";
   /**
    * Change color of heart icon when saved
-   * Add item to global array
+   * Add item to jsonbin
    */
   _favorites.push(_selectedItem);
-  localStorage.setItem("favoriteAttractions", JSON.stringify(_favorites));
-  let items = JSON.parse(localStorage.getItem("favoriteAttractions"));
-  console.log(items);
-  let htmlTemplate = "";
-  items.forEach((item) => {
-    if (item.Files.length > 0) {
-      htmlTemplate += /*html*/ `
-    <article class="attraction favorite" onclick="showDetailedView(${item.Id})" style="background-image: url(${item.Files[0].Uri});">
-      <h2 class="attraction-title">${item.Name}</h2>
-    </article>
-  `;
-    }
-  });
-
-  document.querySelector(".my-favorites").innerHTML = htmlTemplate;
+  await updateJSONBIN(_favorites);
 };
 
 /**
@@ -196,6 +181,66 @@ export let search = (value) => {
     }
   }
 };
+
+/**
+ * JSONBIN
+ */
+
+// ========== GLOBAL VARIABLES ==========
+
+const _baseUrl = "https://api.jsonbin.io/b/618cd857763da443125f3243";
+const _headers = {
+  "X-Master-Key":
+    "$2b$10$yXtf3jr2oK/eU70ltpOs1ers5RS4wtrg6vE5aGxGJIUhMjlrrXOCe",
+  "Content-Type": "application/json",
+};
+
+/**
+ * Fetchs attraction data from jsonbin
+ */
+export async function loadFavorites() {
+  const url = _baseUrl + "/latest"; // make sure to get the latest version
+  const response = await fetch(url, { headers: _headers });
+  const data = await response.json();
+  console.log(data);
+  _favorites = data;
+  appendFavorites(_favorites);
+  //console.log(_favorites);
+}
+
+let appendFavorites = (data) => {
+  let htmlTemplate = "";
+  for (let item of data) {
+    htmlTemplate += /*html*/ `
+    <article class="attraction favorite" onclick="showDetailedView(${item.Id})" style="background-image: url(${item.Files[0].Uri});">
+      <h2 class="attraction-title">${item.Name}</h2>
+    </article>
+  `;
+  }
+
+  document.querySelector(".my-favorites").innerHTML = htmlTemplate;
+
+  showLoader(false);
+};
+
+// ========== Services ==========
+/**
+ * Updates the data source on jsonbin with a given users arrays
+ * @param {Array} attractions
+ */
+export async function updateJSONBIN(attractions) {
+  // put users array to jsonbin
+  const response = await fetch(_baseUrl, {
+    method: "PUT",
+    headers: _headers,
+    body: JSON.stringify(attractions),
+  });
+  const result = await response.json();
+  appendFavorites(result);
+}
+/**
+ * Loader
+ */
 
 function showLoader(show = true) {
   let loader = document.querySelector("#loader");
